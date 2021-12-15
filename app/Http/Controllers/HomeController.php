@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function searchResults(Request $request)
     {
         $query = $request->get('query');
-        $profiles = Profile::where('username',$query)->orWhere('name',$query)->get();
+        $profiles = Profile::where('username',$query)->orWhere('name','like','%^'.$query.'%')->get();
         return view('results',['profiles'=>$profiles]);
     }
 }

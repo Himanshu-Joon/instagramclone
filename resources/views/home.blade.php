@@ -22,23 +22,23 @@
                 <div class="bg-light pt-2 pb-2 mb-2">
                   <span class="h6 ps-2">{{$post->caption}}</span>
                 </div>
-                <span class="d-flex">
+                <span class="d-flex pb-2">
                 
                     <form action="{{ route('like',$post->id) }}" method="post">
                         @csrf
                                            
-                        <button class="btn-primary btn-sm" type="submit" name="like" value="like"><span>{{ $post->likes }}</span> Like</button>
+                        <button class="btn-primary btn-sm" type="submit" name="like" value="like"><span>{{ $post->likes }}</span> <i class="far fa-thumbs-up"></i></button>
                         
                     </form>
 
                     <form action="{{ route('unlike',$post->id) }}" method="post">
                         @csrf
                         
-                        <button class="btn-primary btn-sm ms-2 me-2" type="submit" name="unlike" value="unlike"><span>{{ $post->unlikes }}</span> Unlike</button>
+                        <button class="btn-primary btn-sm ms-2 me-2" type="submit" name="unlike" value="unlike"><span>{{ $post->unlikes }}</span> <i class="far fa-thumbs-down"></i></button>
                                                 
                         
                     </form>
-                    <button class="btn-primary btn-sm"><span> {{ $post->comments }}<a class="text-white text-decoration-none" href="{{ route('add',$post->id) }}"> comment</a></span></button>
+                    <button class="btn-primary btn-sm ps-2 pe-2"><span> {{ $post->comments }}<a class="text-white text-decoration-none mt-1" href="{{ route('add',$post->id) }}"> <i class="far fa-comments fa-lg"></i></a></span></button>
                     
                 
                 </span> 
