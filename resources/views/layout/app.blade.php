@@ -39,7 +39,7 @@
                 <div class="btn-group">
                     
                     <button class="btn btn-transparent dropdown-toggle rounded-circle" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                    <img src="{{ asset('storage/pics/images.png' }}" class="img-fluid rounded-circle" width="30px">
+                    <img src="{{ asset('storage/pics/images.png') }}" class="img-fluid rounded-circle" width="30px">
 
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
